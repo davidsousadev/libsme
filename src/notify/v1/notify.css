@@ -1,0 +1,41 @@
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #243447; 
+    color: #ffffff;
+    padding: 15px;
+    border: 1px solid #1a2a38;
+    border-radius: 4px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: #5294e2; 
+    margin-top: 10px;
+    width: 100%;
+    animation: progress 5s linear forwards;
+    border-radius: 0 0 4px 4px; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes progress {
+    from { width: 100%; }
+    to { width: 0%; }
+}
