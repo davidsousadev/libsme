@@ -1,3 +1,3 @@
-function closeNotification() {
-    document.getElementById("notification").style.display = "none";
+export function closeNotification() {
+    document.getElementById("box-notification").style.display = "none";
 }

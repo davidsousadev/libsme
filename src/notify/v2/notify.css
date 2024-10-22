@@ -1,0 +1,67 @@
+#containerNotificacoes {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notificacao {
+    background-color: #243447; 
+    color: #ffffff;
+    padding: 15px;
+    border: 1px solid #1a2a38;
+    border-radius: 4px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.notificacao.mostra {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.botao-fechar {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.barra-progresso {
+    height: 5px;
+    background-color: #5294e2; 
+    margin-top: 10px;
+    width: 100%;
+    animation: progresso 5s linear forwards;
+    border-radius: 0 0 4px 4px; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#botaoNotificacao {
+    margin: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #5294e2;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#botaoNotificacao:hover {
+    background-color: #417aaf;
+}
+
+@keyframes progresso {
+    from { width: 100%; }
+    to { width: 0%; }
+}
