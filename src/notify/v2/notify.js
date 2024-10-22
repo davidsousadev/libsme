@@ -1,8 +1,8 @@
-const MAX_NOTIFICACOES = 1;
+const MAX_NOTIFICACOES = 3;
 
 function inicializar() {
     document.getElementById("botaoNotificacao").onclick = mostrarNotificacao;
-    setInterval(simularNotificacaoServidor, 5000);
+    //setInterval(simularNotificacaoServidor, 5000);
 }
 
 function mostrarNotificacao() {
