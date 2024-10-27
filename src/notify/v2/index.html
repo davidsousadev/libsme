@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Notify v2</title>
+    <link rel="stylesheet" href="notify.css">
+    <link rel="stylesheet" href="doc.css">
+    
+</head>
+<body>
+    
+    <h1>Documentação: Notify v2 </h1>
+    <h2>1 - Adicione ao head:</h2>
+    <div class="box-code">
+    <pre> 
+        <code id="codigo1">
+&lt;link rel="stylesheet" href="https://libsme.vercel.app/src/notify/v2/notify.css"&gt;
+        </code>
+    </pre>
+    <button class="copy-btn" onclick="copiarCodigo('codigo1')">Copiar</button>
+</div>
+    <h2>2 - Ajuste seu .js:</h2>
+    <div class="box-code">
+    <pre>
+        
+        <code id="codigo2">
+mostrarNotificacao("Texto da notificação");
+        </code>
+    </pre>
+    <button class="copy-btn" onclick="copiarCodigo('codigo2')">Copiar</button>
+</div>
+    
+    <h2>3 - Adicione no final do body:</h2>
+    <div class="box-code">
+    <pre>
+        
+        <code id="codigo3">
+&lt;script defer type="text/javascript" src="https://libsme.vercel.app/src/notify/v2/notify.js"&gt;&lt;/script&gt;
+        </code>
+    </pre>
+    <button class="copy-btn" onclick="copiarCodigo('codigo3')">Copiar</button>
+</div>
+    <h2>Opcional:</h2>
+    <h2>Ajuste seu .css:</h2>
+    <div class="box-code">
+    <pre>
+        
+        <code id="codigo4">
+#containerNotificacoes {
+    
+}
+.notificacao {
+    
+}
+
+.botao-fechar {
+   
+}
+
+.barra-progresso {
+    
+}
+        </code>
+    </pre>
+    <button class="copy-btn" onclick="copiarCodigo('codigo4')">Copiar</button>
+</div>
+   
+    <button class="botao-azul" onclick="mostrarNotificacao('Texto da notificação')">Mostrar Notificação</button>
+    <div id="containerNotificacoes"></div>
+    <a href="../../index.html" class="botao-azul">Voltar</a>
+</body>
+<script defer type="text/javascript" src="notify.js"></script>
+
+<script defer type="text/javascript" src="docs.js">
+
+    
+</script>
+</html>

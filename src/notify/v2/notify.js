@@ -1,18 +1,9 @@
 const MAX_NOTIFICACOES = 3;
 
-function inicializar() {
-    document.getElementById("botaoNotificacao").onclick = mostrarNotificacao;
-    //setInterval(simularNotificacaoServidor, 5000);
-}
-
-function mostrarNotificacao() {
-    const notificacao = criarNotificacao("Texto da notificação");
+function mostrarNotificacao(texto) {
+    const notificacao = criarNotificacao(texto);
     adicionarNotificacaoAoContainer(notificacao);
     gerenciarNotificacoes();
-}
-
-function simularNotificacaoServidor() {
-    mostrarNotificacao();
 }
 
 function criarNotificacao(mensagem) {
@@ -64,4 +55,4 @@ function fecharNotificacao(notificacaoId) {
     }
 }
 
-inicializar();
+

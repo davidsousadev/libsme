@@ -46,21 +46,6 @@
     left: 0;
 }
 
-#botaoNotificacao {
-    margin: 20px;
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #5294e2;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#botaoNotificacao:hover {
-    background-color: #417aaf;
-}
-
 @keyframes progresso {
     from { width: 100%; }
     to { width: 0%; }
