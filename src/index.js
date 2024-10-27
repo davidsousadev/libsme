@@ -1,2 +1,4 @@
 // Notify v2
-import {  } from './notify/v2/notify.js'; 
+import {} from './notify/v2/notify.js';
+
+window.mostrarNotificacao = mostrarNotificacao;

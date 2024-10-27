@@ -55,4 +55,5 @@ function fecharNotificacao(notificacaoId) {
     }
 }
 
-
+export default { mostrarNotificacao };
+window.mostrarNotificacao = mostrarNotificacao;
