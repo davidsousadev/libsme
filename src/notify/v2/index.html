@@ -20,26 +20,43 @@
     </pre>
     <button class="copy-btn" onclick="copiarCodigo('codigo1')">Copiar</button>
 </div>
-    <h2>2 - Ajuste seu .js:</h2>
-    <div class="box-code">
-    <pre>
-        
-        <code id="codigo2">
-mostrarNotificacao("Texto da notificação");
-        </code>
-    </pre>
-    <button class="copy-btn" onclick="copiarCodigo('codigo2')">Copiar</button>
-</div>
+<h2>2 - Ajuste seu body(Exemplo):</h2>
+<div class="box-code">
+<pre>
     
-    <h2>3 - Adicione no final do body:</h2>
+    <code id="codigo2">
+&lt;div id="containerNotificacoes"&gt;
+&lt;/div&gt; 
+&lt;button onclick="mostrarNotificacao('Texto da notificação')"&gt;
+Click Me!
+&lt;/button&gt;
+</body>
+    </code>
+</pre>
+<button class="copy-btn" onclick="copiarCodigo('codigo2')">Copiar</button>
+</div>
+
+    <h2>3 - Ajuste seu .js:</h2>
     <div class="box-code">
     <pre>
         
         <code id="codigo3">
-&lt;script defer type="module" type="text/javascript" src="https://libsme.vercel.app/src/notify/v2/notify.js"&gt;&lt;/script&gt;
+mostrarNotificacao("Texto da notificação");
         </code>
     </pre>
     <button class="copy-btn" onclick="copiarCodigo('codigo3')">Copiar</button>
+    </div>
+    
+    <h2>4 - Adicione no final do body:</h2>
+    <div class="box-code">
+    <pre>
+        
+        <code id="codigo4">
+&lt;script defer type="module" type="text/javascript" src="https://libsme.vercel.app/src/notify/v2/notify.js"&gt;
+&lt;/script&gt;
+        </code>
+    </pre>
+    <button class="copy-btn" onclick="copiarCodigo('codigo4')">Copiar</button>
 </div>
     <h2>Opcional:</h2>
     <h2>Ajuste seu .css:</h2>
@@ -77,3 +94,29 @@ mostrarNotificacao("Texto da notificação");
     
 </script>
 </html>
+
+
+<!-- 
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="https://libsme.vercel.app/src/notify/v2/notify.css">
+        
+</head>
+<body>
+  <div id="containerNotificacoes"
+  ></div>  
+  <button onclick="mostrarNotificacao('Texto da notificação')">Click Me!</button>
+</body>
+
+<script defer type="module" type="text/javascript" src="https://libsme.vercel.app/src/notify/v2/notify.js"></script>
+</html>
+
+
+-->
