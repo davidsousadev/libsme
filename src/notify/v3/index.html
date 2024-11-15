@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Notify v3</title>
+</head>
+<body>
+    
+    <hr />
+    <h1>Exemplo de Notificação</h1>
+
+    <!-- Botões para demonstrar diferentes posições e animações -->
+    <button onclick="mostrarNotificacao('Notificação Top-Right com Despencar', {posicao: 'top-right', movimentoEntrada: 'despencar'})">Top-Right Despencar</button>
+    <button onclick="mostrarNotificacao('Notificação Top-Left com Pop Up', {posicao: 'top-left', movimentoEntrada: 'popUp'})">Top-Left Pop Up</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Right com Fade In', {posicao: 'bottom-right', movimentoEntrada: 'fadeIn'})">Bottom-Right Fade In</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Left com Deslizar Direita', {posicao: 'bottom-left', movimentoEntrada: 'deslizarDireita'})">Bottom-Left Deslizar Direita</button>
+    <button onclick="mostrarNotificacao('Notificação Top-Right com Deslizar Esquerda', {posicao: 'top-right', movimentoEntrada: 'deslizarEsquerda'})">Top-Right Deslizar Esquerda</button>
+    <button onclick="mostrarNotificacao('Notificação Top-Left com Subir', {posicao: 'top-left', movimentoEntrada: 'subir'})">Top-Left Subir</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Right com Desaparecer', {posicao: 'bottom-right', movimentoSaida: 'desaparecer'})">Bottom-Right Desaparecer</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Left com Despencar', {posicao: 'bottom-left', movimentoEntrada: 'despencar'})">Bottom-Left Despencar</button>
+
+    <!-- Mais botões para outras combinações -->
+    <button onclick="mostrarNotificacao('Notificação Top-Right com Fade In', {posicao: 'top-right', movimentoEntrada: 'fadeIn'})">Top-Right Fade In</button>
+    <button onclick="mostrarNotificacao('Notificação Top-Left com Despencar', {posicao: 'top-left', movimentoEntrada: 'despencar'})">Top-Left Despencar</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Right com Subir', {posicao: 'bottom-right', movimentoEntrada: 'subir'})">Bottom-Right Subir</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Left com Pop Up', {posicao: 'bottom-left', movimentoEntrada: 'popUp'})">Bottom-Left Pop Up</button>
+    <button onclick="mostrarNotificacao('Notificação Top-Right com Deslizar Direita', {posicao: 'top-right', movimentoEntrada: 'deslizarDireita'})">Top-Right Deslizar Direita</button>
+    <button onclick="mostrarNotificacao('Notificação Top-Left com Fade In', {posicao: 'top-left', movimentoEntrada: 'fadeIn'})">Top-Left Fade In</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Right com Pop Up', {posicao: 'bottom-right', movimentoEntrada: 'popUp'})">Bottom-Right Pop Up</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Left com Subir', {posicao: 'bottom-left', movimentoEntrada: 'subir'})">Bottom-Left Subir</button>
+    <button onclick="mostrarNotificacao('Notificação Top-Right com Pop Up', {posicao: 'top-right', movimentoEntrada: 'popUp'})">Top-Right Pop Up</button>
+    <button onclick="mostrarNotificacao('Notificação Top-Left com Deslizar Direita', {posicao: 'top-left', movimentoEntrada: 'deslizarDireita'})">Top-Left Deslizar Direita</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Right com Deslizar Esquerda', {posicao: 'bottom-right', movimentoEntrada: 'deslizarEsquerda'})">Bottom-Right Deslizar Esquerda</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Left com Fade In', {posicao: 'bottom-left', movimentoEntrada: 'fadeIn'})">Bottom-Left Fade In</button>
+    <button onclick="mostrarNotificacao('Notificação Top-Right com Subir', {posicao: 'top-right', movimentoEntrada: 'subir'})">Top-Right Subir</button>
+    <button onclick="mostrarNotificacao('Notificação Top-Left com Desaparecer', {posicao: 'top-left', movimentoSaida: 'desaparecer'})">Top-Left Desaparecer</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Right com Pop Up', {posicao: 'bottom-right', movimentoEntrada: 'popUp'})">Bottom-Right Pop Up</button>
+    <button onclick="mostrarNotificacao('Notificação Bottom-Left com Deslizar Direita', {posicao: 'bottom-left', movimentoEntrada: 'deslizarDireita'})">Bottom-Left Deslizar Direita</button>
+
+    <!-- Botões para ajustar cor e tempo -->
+    <button onclick="mostrarNotificacao('Alteração de cor', {cor: 'red'})">Cor Vermelha</button>
+    <button onclick="mostrarNotificacao('Alteração de tempo', {tempo: 1000})">Tempo 3s</button>
+
+    <div id="containerNotificacoes"></div>
+
+    <script defer src="index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+.botao-azul {
+    margin: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #5294e2;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.botao-azul:hover {
+    background-color: #417aaf;
+}
+.box-code{
+    display: flex;
+    width: 100%;
+
+}
+pre {
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 1em;
+    border-radius: 8px;
+    overflow-x: auto;
+    width: 50%;
+}
+code {
+    font-family: monospace;
+    font-size: 1em;
+    color: #004494;
+}
+.copy-btn {
+    z-index: 1;
+    margin-left: -70px;
+    margin-top: 20px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+.copy-btn:active {
+    background-color: #004494;
+}
