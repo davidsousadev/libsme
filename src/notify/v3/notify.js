@@ -12,26 +12,40 @@ const MAX_NOTIFICACOES = 11;
  * @param {string} [opcoes.posicao='top-right'] - Posição da notificação na tela.
  */
 function mostrarNotificacao(mensagem, opcoes = {}) {
-    const container = document.getElementById("containerNotificacoes");
-    if (!container) {
-        console.warn("Container de notificações não encontrado!");
-        return;
-    }
-
-    // Verifica se há limite de notificações visíveis
+    const container = obterOuCriarContainer();
     const notificacoesExistentes = container.querySelectorAll(".notificacao");
+
+    // Verifica se o número máximo de notificações foi atingido
     if (notificacoesExistentes.length >= MAX_NOTIFICACOES) {
-        // Remove a primeira notificação para abrir espaço para a nova
+        // Remove a primeira notificação para abrir espaço
         notificacoesExistentes[0].remove();
     }
 
     const notificacao = criarNotificacao(mensagem, opcoes);
     container.appendChild(notificacao);
+
     const movimentoSaida = opcoes.movimentoSaida || 'desaparecer';
-    // Adiciona a notificação com um tempo de fechamento
     setTimeout(() => {
         fecharNotificacao(notificacao, movimentoSaida);
     }, opcoes.duracao || 10000);
+}
+
+/**
+ * Verifica ou cria o container de notificações, se necessário.
+ * @returns {HTMLElement} - O container de notificações.
+ */
+function obterOuCriarContainer() {
+    let container = document.getElementById("containerNotificacoes");
+    if (!container) {
+        container = document.createElement("div");
+        container.id = "containerNotificacoes";
+        container.style.position = "fixed";
+        container.style.zIndex = 1000;
+        document.body.appendChild(container);
+    }
+    container.style.maxHeight = "90vh"; // Limita o tamanho do container
+    container.style.overflowY = "auto"; // Permite rolar se houver muitas notificações
+    return container;
 }
 
 /**
@@ -123,6 +137,7 @@ function ajustarPosicao(notificacao, posicao) {
     }
 }
 
+
 /**
  * Calcula o deslocamento com base no número de notificações existentes na posição.
  * @param {HTMLElement} container - O container onde as notificações são exibidas.
@@ -130,9 +145,8 @@ function ajustarPosicao(notificacao, posicao) {
  * @returns {number} - O valor de deslocamento para a posição da nova notificação.
  */
 function calcularDeslocamento(container, posicao) {
-    return Array.from(container.querySelectorAll(`.notificacao.${posicao}`)).reduce((acumulado, el) => {
-        return acumulado + el.offsetHeight + 10; // Altura da notificação + margem
-    }, 0);
+    const notificacoes = Array.from(container.querySelectorAll(`.notificacao.${posicao}`));
+    return notificacoes.reduce((acumulado, el) => acumulado + el.offsetHeight + 10, 0);
 }
 
 /**

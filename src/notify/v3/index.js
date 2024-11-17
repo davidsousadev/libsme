@@ -7,6 +7,6 @@ window.link = link;
 window.mostrarNotificacao = mostrarNotificacao;
 window.fecharNotificacao = fecharNotificacao;
 
-export default { mostrarNotificacao, fecharNotificacao };
 
-
+export default link;
+export { mostrarNotificacao, fecharNotificacao };

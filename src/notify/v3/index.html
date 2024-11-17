@@ -1,89 +1,113 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notify V3 - Documentação</title>
+    <title>Configurações Personalizadas - Notify V3</title>
     <link rel="stylesheet" href="docs.css">
 </head>
 <body>
+    <h1>Documentação - Biblioteca Notify V3</h1>
+    <p>Este documento explica como utilizar a biblioteca de notificações para exibir mensagens no navegador de forma simples e eficaz.</p>
 
-    <div class="container">
-        <button onclick="mostrarNotificacao('Notificação Default')">Default</button>
-        <h1>Notificações Animadas - 12 animações</h1>
-        <h2>Cantos e animações para testar - 48 combinações*</h2>
-        
-        <div class="button-group">
-            <!-- Top-Right -->
-            <button onclick="mostrarNotificacao('Notificação Top-Right com Despencar', {posicao: 'top-right', movimentoEntrada: 'despencar'})">Top-Right Despencar</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Right com Pop Up', {posicao: 'top-right', movimentoEntrada: 'popUp'})">Top-Right Pop Up</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Right com Fade In', {posicao: 'top-right', movimentoEntrada: 'fadeIn'})">Top-Right Fade In</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Right com Deslizar Direita', {posicao: 'top-right', movimentoEntrada: 'deslizarDireita'})">Top-Right Deslizar Direita</button>
+    <h2>Instalação</h2>
+    <p>Adicione o seguinte script no <code>&lt;head&gt;</code> ou no final do <code>&lt;body&gt;</code> da sua página:</p>
+    <pre><code>&lt;script defer src="https://libsme.vercel.app/src/notify/v3/index.js" type="module"&gt;&lt;/script&gt;</code></pre>
 
-            <button onclick="mostrarNotificacao('Notificação Top-Right com Deslizar Esquerda', {posicao: 'top-right', movimentoEntrada: 'deslizarEsquerda'})">Top-Right Deslizar Esquerda</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Right com Subir', {posicao: 'top-right', movimentoEntrada: 'subir'})">Top-Right Subir</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Right com Desaparecer', {posicao: 'top-right', movimentoEntrada: 'desaparecer'})">Top-Right Desaparecer</button>
-
-            <button onclick="mostrarNotificacao('Notificação Top-Right com Girar', {posicao: 'top-right', movimentoEntrada: 'girar'})">Top-Right Girar</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Right com Pular', {posicao: 'top-right', movimentoEntrada: 'pular'})">Top-Right Pular</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Right com Balanço', {posicao: 'top-right', movimentoEntrada: 'balanco'})">Top-Right Balanço</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Right com zoomIn', {posicao: 'top-right', movimentoEntrada: 'zoomIn'})">Top-Right zoomIn</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Right com fadeInUp', {posicao: 'top-right', movimentoEntrada: 'fadeInUp'})">Top-Right fadeInUp</button>
-
-            <!-- Top-Left -->
-            <button onclick="mostrarNotificacao('Notificação Top-Left com Despencar', {posicao: 'top-left', movimentoEntrada: 'despencar'})">Top-Left Despencar</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Left com Pop Up', {posicao: 'top-left', movimentoEntrada: 'popUp'})">Top-Left Pop Up</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Left com Fade In', {posicao: 'top-left', movimentoEntrada: 'fadeIn'})">Top-Left Fade In</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Left com Deslizar Direita', {posicao: 'top-left', movimentoEntrada: 'deslizarDireita'})">Top-Left Deslizar Direita</button>
-
-            <button onclick="mostrarNotificacao('Notificação Top-Left com Deslizar Esquerda', {posicao: 'top-left', movimentoEntrada: 'deslizarEsquerda'})">Top-Left Deslizar Esquerda</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Left com Subir', {posicao: 'top-left', movimentoEntrada: 'subir'})">Top-Left Subir</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Left com Desaparecer', {posicao: 'top-left', movimentoEntrada: 'desaparecer'})">Top-Left Desaparecer</button>
-            
-            <button onclick="mostrarNotificacao('Notificação Top-Left com Girar', {posicao: 'top-left', movimentoEntrada: 'girar'})">Top-Left Girar</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Left com Pular', {posicao: 'top-left', movimentoEntrada: 'pular'})">Top-Left Pular</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Left com Balanço', {posicao: 'top-left', movimentoEntrada: 'balanco'})">Top-Left Balanço</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Left com zoomIn', {posicao: 'top-left', movimentoEntrada: 'zoomIn'})">Top-Left zoomIn</button>
-            <button onclick="mostrarNotificacao('Notificação Top-Left com fadeInUp', {posicao: 'top-left', movimentoEntrada: 'fadeInUp'})">Top-Left fadeInUp</button>
-
-            <!-- Bottom-Right -->
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com Despencar', {posicao: 'bottom-right', movimentoEntrada: 'despencar'})">Bottom-Right Despencar</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com Pop Up', {posicao: 'bottom-right', movimentoEntrada: 'popUp'})">Bottom-Right Pop Up</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com Fade In', {posicao: 'bottom-right', movimentoEntrada: 'fadeIn'})">Bottom-Right Fade In</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com Deslizar Direita', {posicao: 'bottom-right', movimentoEntrada: 'deslizarDireita'})">Bottom-Right Deslizar Direita</button>
-
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com Deslizar Esquerda', {posicao: 'bottom-right', movimentoEntrada: 'deslizarEsquerda'})">Bottom-Right Deslizar Esquerda</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com Subir', {posicao: 'bottom-right', movimentoEntrada: 'subir'})">Bottom-Right Subir</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com Desaparecer', {posicao: 'bottom-right', movimentoEntrada: 'desaparecer'})">Bottom-Right Desaparecer</button>
-            
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com Girar', {posicao: 'bottom-right', movimentoEntrada: 'girar'})">Bottom-Right Girar</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com Pular', {posicao: 'bottom-right', movimentoEntrada: 'pular'})">Bottom-Right Pular</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com Balanço', {posicao: 'bottom-right', movimentoEntrada: 'balanco'})">Bottom-Right Balanço</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com zoomIn', {posicao: 'bottom-right', movimentoEntrada: 'zoomIn'})">Bottom-Right zoomIn</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Right com fadeInUp', {posicao: 'bottom-right', movimentoEntrada: 'fadeInUp'})">Bottom-Right fadeInUp</button>
-
-            <!-- Bottom-Left -->
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com Despencar', {posicao: 'bottom-left', movimentoEntrada: 'despencar'})">Bottom-Left Despencar</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com Pop Up', {posicao: 'bottom-left', movimentoEntrada: 'popUp'})">Bottom-Left Pop Up</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com Fade In', {posicao: 'bottom-left', movimentoEntrada: 'fadeIn'})">Bottom-Left Fade In</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com Deslizar Direita', {posicao: 'bottom-left', movimentoEntrada: 'deslizarDireita'})">Bottom-Left Deslizar Direita</button>
-
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com Deslizar Esquerda', {posicao: 'bottom-left', movimentoEntrada: 'deslizarEsquerda'})">Bottom-Left Deslizar Esquerda</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com Subir', {posicao: 'bottom-left', movimentoEntrada: 'subir'})">Bottom-Left Subir</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com Desaparecer', {posicao: 'bottom-left', movimentoEntrada: 'desaparecer'})">Bottom-Left Desaparecer</button>
-            
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com Girar', {posicao: 'bottom-left', movimentoEntrada: 'girar'})">Bottom-Left Girar</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com Pular', {posicao: 'bottom-left', movimentoEntrada: 'pular'})">Bottom-Left Pular</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com Balanço', {posicao: 'bottom-left', movimentoEntrada: 'balanco'})">Bottom-Left Balanço</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com zoomIn', {posicao: 'bottom-left', movimentoEntrada: 'zoomIn'})">Bottom-Left zoomIn</button>
-            <button onclick="mostrarNotificacao('Notificação Bottom-Left com fadeInUp', {posicao: 'bottom-left', movimentoEntrada: 'fadeInUp'})">Bottom-Left fadeInUp</button>
-        </div>
+    <h2>Exemplo Mínimo</h2>
+    <p>Copie o código abaixo no <code>&lt;body&gt;</code> do seu arquivo HTML:</p>
+    <div class="code-container">
+        <pre id="code-minimo">
+<code>&lt;button onclick="mostrarNotificacao('Notificação Default')"&gt;Default&lt;/button&gt;
+&lt;script defer src="https://libsme.vercel.app/src/notify/v3/index.js" type="module"&gt;&lt;/script&gt;</code>
+        </pre>
+        <button onclick="copiarCodigo()">Copiar Código</button>
     </div>
 
+    <h2>Como Usar</h2>
+    <p>Use a função <code>mostrarNotificacao(mensagem, opcoes?)</code> para exibir notificações. Exemplo:</p>
+    <pre><code>&lt;script&gt;
+    mostrarNotificacao("Esta é uma notificação padrão!");
+&lt;/script&gt;</code></pre>
 
-    <!-- Container para Notificações -->
-    <div id="containerNotificacoes"></div>
+    <h3>Com Opções Personalizadas</h3>
+    <pre><code>&lt;script&gt;
+    mostrarNotificacao("Notificação Personalizada!", {
+        cor: "#4CAF50",
+        duracao: 4000,
+        movimentoEntrada: "deslizar",
+        movimentoSaida: "esvair",
+        posicao: "bottom-left"
+    });
+&lt;/script&gt;</code></pre>
 
-    <script defer src="index.js" type="module"></script>
+    <script>
+        function copiarCodigo() {
+            const codigo = document.getElementById("code-minimo").innerText;
+            navigator.clipboard.writeText(codigo.trim()).then(() => {
+                mostrarNotificacao("Código copiado para a área de transferência!");
+            }).catch(err => {
+                console.error("Erro ao copiar o código: ", err);
+            });
+        }
+    </script>
+
+    <p>Personalize suas notificações usando as propriedades abaixo:</p>
+
+    <h2>Configurações Disponíveis</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Propriedade</th>
+                <th>Tipo</th>
+                <th>Valor Padrão</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>cor</code></td>
+                <td><code>string</code></td>
+                <td><code>#333333</code></td>
+                <td>Define a cor de fundo da notificação.</td>
+            </tr>
+            <tr>
+                <td><code>duracao</code></td>
+                <td><code>number</code></td>
+                <td><code>5000</code></td>
+                <td>Tempo em milissegundos antes da notificação desaparecer.</td>
+            </tr>
+            <tr>
+                <td><code>movimentoEntrada</code></td>
+                <td><code>string</code></td>
+                <td><code>"deslizar"</code></td>
+                <td>Animação de entrada da notificação.</td>
+            </tr>
+            <tr>
+                <td><code>movimentoSaida</code></td>
+                <td><code>string</code></td>
+                <td><code>"esvair"</code></td>
+                <td>Animação de saída da notificação.</td>
+            </tr>
+            <tr>
+                <td><code>posicao</code></td>
+                <td><code>string</code></td>
+                <td><code>"top-right"</code></td>
+                <td>Define a posição da notificação na tela.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Exemplos Práticos</h2>
+    <div class="example-container">
+        <button onclick="mostrarNotificacao('Notificação Padrão')">Notificação Padrão</button>
+
+        <button onclick="mostrarNotificacao('Notificação Personalizada!', { cor: '#4CAF50', duracao: 4000, movimentoEntrada: 'deslizar', movimentoSaida: 'esvair', posicao: 'bottom-right' })">
+            Notificação Personalizada
+        </button>
+        <button><a href="example.html">Exemplos</a></button>
+    </div>
+
+    <script defer src="https://libsme.vercel.app/src/notify/v3/index.js" type="module"></script>
 </body>
 </html>
