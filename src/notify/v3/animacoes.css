@@ -1,0 +1,62 @@
+/* Animações de entrada */
+@keyframes despencar {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popUp {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes deslizarDireita {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes deslizarEsquerda {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes subir {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes desaparecer {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes girar {
+    from { transform: rotate(270deg); opacity: 0; }
+    to { transform: rotate(360deg); opacity: 1; }
+}
+
+@keyframes pular {
+    from { transform: translateY(0); opacity: 0; }
+    to { transform: translateY(-20px); opacity: 1; }
+}
+
+@keyframes balanco {
+    0% { transform: translateX(-20px); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+    from, to { opacity: 0; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
