@@ -39,14 +39,27 @@ function obterOuCriarContainer() {
     if (!container) {
         container = document.createElement("div");
         container.id = "containerNotificacoes";
-        container.style.position = "fixed";
-        container.style.zIndex = 1000;
+
+        // Estilos para evitar interferências
+        container.style.position = "fixed"; // Sempre visível
+        container.style.zIndex = 1000; // Abaixo de overlays importantes, mas acima de conteúdos normais
+        container.style.pointerEvents = "none"; // Ignora cliques no container
+        container.style.width = "fit-content";
+        container.style.maxWidth = "90%"; // Para evitar que notificações fiquem muito largas
+        container.style.maxHeight = "90vh"; // Limita a altura para não ocupar a tela toda
+        container.style.overflowY = "auto"; // Rola se houver muitas notificações
+        container.style.padding = "10px";
+        container.style.boxSizing = "border-box";
+
+        // Ajuste para mobile
+        container.style.right = "10px"; // Distância da borda direita
+        container.style.bottom = "10px"; // Distância da borda inferior
+
         document.body.appendChild(container);
     }
-    container.style.maxHeight = "90vh"; // Limita o tamanho do container
-    container.style.overflowY = "auto"; // Permite rolar se houver muitas notificações
     return container;
 }
+
 
 /**
  * Cria uma notificação e ajusta seus estilos e elementos
@@ -63,6 +76,7 @@ function obterOuCriarContainer() {
 function criarNotificacao(mensagem, opcoes) {
     const notificacao = document.createElement("div");
     notificacao.className = "notificacao";
+    notificacao.style.pointerEvents = "auto";
     notificacao.id = "notificacao-" + Date.now();
 
     // Definir propriedades de cor e duração
